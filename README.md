@@ -1,55 +1,36 @@
-# OOP Basics in CSharp: Library Management System
+# OOP Basics en CSharp: Sistema de Gestión de Biblioteca
 
-## Introduction
-In this exercise, we will create a library management system to handle books in a library. We will define a `Book` class to describe the properties of books. We will also include functionalities to update book details, compare books, and display information about each book.
+## Introducción
+En este ejercicio, crearemos un sistema de gestión de biblioteca para manejar libros. Definiremos una clase `Book` para describir las propiedades de los libros, como el título, el autor y el año de publicación. También incluiremos funcionalidades para actualizar los detalles de un libro, comparar libros y mostrar información sobre cada libro.
 
-After completing this exercise, you will be able to:
-- Create a class with properties, defined with and without default values, as well as optional properties.
-- Create a constructor with some of its input parameters having a default value.
-- Instantiate objects of a class using different constructors.
-- Pass values from one object to a function of another.
-- Use enums for categorization.
+## Requisitos
+- Sube el código para todas las instrucciones a tu repositorio.
 
-## Requirements
-- Upload the code for all of the following prompts to your repository.
+## Instrucciones
 
-## Submission
-Upon completion, run the following commands:
-```
-git add .
-git commit -m "done"
-git push origin main
-```
+### Iteración 1: Crear Libros
+1. Crea una clase `Book` con tres propiedades: `Title` (título del libro), `Author` (autor del libro) y `Year` (año de publicación).
+2. Implementa un constructor que inicialice todas las propiedades. Por defecto, establece el año de publicación en 2000.
+3. Crea al menos tres objetos de la clase `Book` con diferentes libros. Al inicializarlos, asegúrate de usar valores predeterminados y también especificar el año manualmente en al menos uno de los objetos.
 
-## Starter code
-No initial code provided.
+### Iteración 2: Funcionalidades Adicionales
+1. Crea una función `IsOlderThan(int year)` que compare el año de publicación del libro con un año dado. Debe devolver `true` si el libro es más antiguo que el año dado, y `false` en caso contrario.
+2. Implementa una función `UpdateYear(int newYear)` que actualice el año de publicación del libro.
+3. Realiza comparaciones de años de publicación entre los libros creados y llama a la función `UpdateYear` varias veces para ver cómo cambian los libros.
 
-## Iterations
+### Iteración 3: Categorización de Libros
+1. Crea un enum `Genre` con algunas categorías de libros, como `Fiction` (ficción), `NonFiction` (no ficción), `Science` (ciencia), `Fantasy` (fantasía), etc.
+2. Agrega una propiedad opcional `Genre` de tipo `Genre` a la clase `Book`.
+3. Introduce una nueva propiedad `IsBestseller` en la clase `Book`. Esta propiedad será `true` si el libro es un bestseller, y `false` en caso contrario.
 
-### Iteration 1
-1. Create a class `Book` with three properties: `Title` (string), `Author` (string), and `Year` (int).
-2. Create a constructor for all of the properties. Set the `Year` input parameter within the constructor to have a default value of 2000.
-3. Create a few of your own books as objects of the `Book` class (minimum 3). When initializing them, at least one of the objects should use the default `Year` value and at least one should have its `Year` defined manually within the constructor.
+### Iteración 4: Información Detallada del Libro
+1. Implementa una función `BookInfo` que devuelva una cadena de texto con información detallada sobre el libro.
+2. La cadena debe incluir el título, el autor, el año de publicación y el género del libro. Si el género no está definido, debe indicar que es desconocido.
 
-### Iteration 2
-1. Create a function `IsOlderThan(int year)` that takes an input parameter and compares it to the `Year` property. It returns a `bool` value as a result of the comparison if the `Year` property is less than the input parameter.
-2. Create a function `UpdateYear(int newYear)` that updates the `Year` property.
-3. Compare the `Year` of any of your created `Book` objects at least 2 times and print the results.
+### Iteración 5: Asignación de Géneros
+1. Asigna géneros a algunos de los libros creados.
+2. Utiliza la función `BookInfo` para imprimir la información detallada de cada libro.
 
-### Iteration 3
-1. Create a new enum `Genre` and give it a few possible values (like `Fiction`, `NonFiction`, `Science`, `Fantasy`).
-2. Create an optional property `Genre` of type `Genre` in the `Book` class.
-3. Create a new class property `IsBestseller` that is a `bool` and has a default value `false`.
-
-### Iteration 4
-1. Create a function `BookInfo` that returns a `string`.
-2. Depending on the value of the property `Genre`, return the string stating the genre of the book. If the property `Genre` is `null`, return a string stating that the genre is unknown.
-
-### Iteration 5
-1. Assign genres to some of your books.
-2. Use the `BookInfo` function to print the information of each book.
-
-### Iteration 6 (Bonus)
-1. Within the `BookInfo` function, if the property `IsBestseller` is `true`, add a message to your return string saying that the book is a bestseller. The previous genre check logic should still happen regardless of this new logic, so the return string should now have two parts - one regarding their bestseller status and the other regarding the genre.
-
-For example, a possible return string would be: `"This book is a bestseller. Genre: Fiction."`
+### Iteración 6 (Bonus): Bestsellers
+1. Modifica la función `BookInfo` para que también indique si el libro es un bestseller.
+2. La cadena devuelta debe tener dos partes: una sobre el estado de bestseller del libro y otra sobre su género.
