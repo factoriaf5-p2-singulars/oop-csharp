@@ -3,7 +3,7 @@
 ## Introduction
 In this exercise, we will create a library management system to handle books in a library. We will define a `Book` class to describe the properties of books. We will also include functionalities to update book details, compare books, and display information about each book.
 
-After completing this lab, you will be able to:
+After completing this exercise, you will be able to:
 - Create a class with properties, defined with and without default values, as well as optional properties.
 - Create a constructor with some of its input parameters having a default value.
 - Instantiate objects of a class using different constructors.
